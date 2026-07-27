@@ -1,7 +1,9 @@
 [project]
-name = "orbital-data-platform"
+name = "orbitalscope"
+description = "Backend and data platform for OrbitalScope."
 version = "0.1.0"
-requires-python = ">=3.14.5"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
 dependencies = [
     "fastapi>=0.139.2",
     "uvicorn[standard]>=0.51.0",
@@ -9,6 +11,11 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "httpx>=0.28.1",
     "pytest>=9.1.1",
     "ruff>=0.16.0",
 ]
+
+[build-system]
+requires = ["uv_build>=0.11.30,<0.12"]
+build-backend = "uv_build"
